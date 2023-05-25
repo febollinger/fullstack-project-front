@@ -1,0 +1,33 @@
+@mixin diplayFlex($justify_content, $flex_direction, $align_items)
+    display: flex
+    justify-content: $justify_content
+    flex-direction: $flex_direction
+    align-items: $align_items
+
+@mixin screenSize($height, $width)
+    height: $height
+    width: $width
+
+@mixin fonts($font_size, $font_weight)
+    font-size: $font_size
+    font-weight: $font_weight
+
+@mixin media-xsm
+    @media (min-width: 0px)
+        @content
+
+@mixin media-sm
+    @media (min-width: 360px)
+        @content
+
+@mixin media-md
+    @media (min-width: 769px)
+        @content
+
+@mixin media-lg
+    @media (min-width: 1024px)
+        @content
+
+@mixin media-xl
+    @media (min-width: 1600px)
+        @content

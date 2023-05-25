@@ -1,0 +1,24 @@
+@use './mixins'
+@use './variables'
+
+.btn
+    @include  mixins.screenSize(35px, 80%)
+    padding: 10px
+    text-align: center
+    cursor: pointer
+    @include mixins.fonts(16px, 600)
+    color: variables.$color-letters
+
+.primary
+    background-color: variables.$color-btn1
+    border-radius: 6px
+
+    &:hover
+        background-color: variables.$color-btn3
+
+.secondary
+    background-color: variables.$color-btn2
+    border-radius: 6px
+
+    &:hover
+        background-color: variables.$color-btn4
