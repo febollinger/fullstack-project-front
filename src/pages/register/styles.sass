@@ -1,0 +1,90 @@
+@use 'src/styles/variables'
+@use 'src/styles/mixins'
+
+@include mixins.media-xsm
+
+    .div-register
+        @include mixins.screenSize(60%, 95%)
+
+        @include mixins.diplayFlex(space-evenly, column, center)
+
+        h1
+            @include mixins.fonts(30px, 800)
+
+    .form-register
+        @include mixins.screenSize(300px, 90%)
+
+        @include mixins.diplayFlex(space-evenly, column, flex-start)
+
+        input
+            @include mixins.screenSize(35px, 100%)
+
+            border-radius: 5px
+
+.labelEmail
+    position: sticky
+    top: 55%
+    left: 30px
+    background-color: variables.$color-btn1
+    padding: 0 4px
+    border-radius: 3px
+
+    @include mixins.fonts(14px, 500)
+
+.labelPass
+    position: sticky
+    top: 65%
+    left: 30px
+    background-color: variables.$color-btn1
+    padding: 0 4px
+    border-radius: 3px
+
+    @include mixins.fonts(14px, 500)
+
+.labelNum
+    position: sticky
+    top: 75%
+    left: 30px
+    background-color: variables.$color-btn1
+    padding: 0 4px
+    border-radius: 3px
+
+    @include mixins.fonts(14px, 500)
+
+@include mixins.media-m
+    .div-register
+        @include mixins.screenSize(60%, 480px)
+
+    .form-register
+        @include mixins.screenSize(320px, 400px)
+
+    .labelEmail
+        top: 53%
+        left: 45px
+
+    .labelPass
+        top: 64%
+        left: 45px
+
+@include mixins.media-md
+
+    .div-register
+        @include mixins.screenSize(60%, 480px)
+
+    .form-register
+        @include mixins.screenSize(320px, 400px)
+
+    .labelEmail
+        left: 50px
+
+    .labelPass
+        left: 50px
+
+@include mixins.media-xl
+    .labelEmail
+        top: 55%
+        left: 50px
+
+    .labelPass
+        top: 65%
+        left: 50px
