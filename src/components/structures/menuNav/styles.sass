@@ -1,0 +1,30 @@
+@use "src/styles/mixins"
+@use "src/styles/variables"
+
+@include mixins.media-xsm
+    nav
+        position: fixed
+        background-color: variables.$color-bg
+        z-index: 1
+        @include mixins.screenSize(73px ,100%)
+        border-bottom: 1px solid variables.$grey0
+
+    .menu
+        @include mixins.screenSize(73px ,95%)
+        @include mixins.diplayFlex(space-between,row, center)
+
+        img
+            @include mixins.screenSize(100% ,75px)
+
+        div
+            @include mixins.screenSize(50px ,40%)
+            @include mixins.diplayFlex(flex-end,row, center)
+
+            button
+                background-color: variables.$color-bg
+
+            a
+                color: variables.$color-letters
+
+    .logout
+        margin: 0 15px

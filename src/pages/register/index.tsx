@@ -1,5 +1,5 @@
 import logo from "../../assets/logo-fullstack-project.png"
-import { RegisterForm } from "../../components/structures/registerForm"
+import { RegisterFormClient } from "../../components/structures/formRegister/registerFormClient"
 
 import "./styles.sass"
 
@@ -11,8 +11,8 @@ export const RegisterPage = () => {
                     <img src={logo} alt="Logo" />
                 </div>
                 <div className="div-register">
-                    <h1>Register</h1>
-                    <RegisterForm />
+                    <h1>Become a cliente !</h1>
+                    <RegisterFormClient />
                 </div>
             </main>
         </>

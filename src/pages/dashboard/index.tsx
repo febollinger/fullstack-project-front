@@ -1,5 +1,12 @@
+import { MainDashboard } from "../../components/structures/main/mainDash"
+import { Nav } from "../../components/structures/menuNav/nav"
+import "./styles.sass"
+
 export const DashboardPage = () => {
     return (
-        <h1>dashboard</h1>
+        <div>
+            <Nav />
+            <MainDashboard />
+        </div>    
     )
 }
