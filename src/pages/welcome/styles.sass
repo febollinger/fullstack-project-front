@@ -1,0 +1,51 @@
+@use 'src/styles/variables'
+@use 'src/styles/mixins'
+
+@include mixins.media-sm
+.welcome
+    background-color: variables.$color-bg
+
+    @include mixins.diplayFlex(space-around, column, center)
+
+    @include mixins.screenSize(100vh, 100%)
+
+.firstSec
+    width: 100%
+
+    @include mixins.diplayFlex(center, column, center)
+
+    img
+        @include mixins.screenSize(320px, 300px)
+
+    h2
+        @include mixins.fonts(18px, 800)
+
+    h3
+        padding: 8px
+        color: variables.$grey1
+    @include mixins.fonts(15px, 500)
+
+.secondSec
+
+    @include mixins.diplayFlex(space-evenly, column, center)
+
+    @include mixins.screenSize(320px, 100%)
+
+    & div
+        @include mixins.screenSize(80px, 300px)
+
+        @include mixins.diplayFlex(space-evenly, column, center)
+
+        color: variables.$grey1
+        @include mixins.fonts(15px, 500)
+
+@include mixins.media-md
+    .welcome
+        @include mixins.diplayFlex(center, row, center)
+
+    .firstSec
+        @include mixins.screenSize(300px, 370px)
+
+    .secondSec
+        @include mixins.diplayFlex(center, column-reverse, center)
+        @include mixins.screenSize(300px, 370px)

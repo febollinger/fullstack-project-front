@@ -1,0 +1,24 @@
+@use "src/styles/mixins"
+@use "src/styles/variables"
+
+@include mixins.media-xsm
+.containerModal
+    @include mixins.screenSize(100%, 100%)
+    @include mixins.diplayFlex(flex-start, column, center)
+    position: absolute
+    z-index: 1
+    background-color: rgba(0, 0, 0, 0.5)
+
+.modal
+    @include mixins.screenSize(360px, 340px)
+    position: fixed
+    top: 200px
+    border-radius: 4px
+
+    background-color: variables.$color-bg
+
+    @include mixins.diplayFlex(space-evenly, column, center)
+
+    div
+        @include mixins.diplayFlex(space-between, row, center)
+        @include mixins.screenSize(40px, 90%)

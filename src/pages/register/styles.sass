@@ -1,0 +1,121 @@
+@use 'src/styles/variables'
+@use 'src/styles/mixins'
+
+@include mixins.media-xsm
+
+    .div-register
+        @include mixins.screenSize(60%, 95%)
+
+        @include mixins.diplayFlex(space-evenly, column, center)
+
+        h1
+            @include mixins.fonts(30px, 800)
+
+    .form
+        @include mixins.screenSize(320px, 90%)
+
+        &__register
+            @include mixins.diplayFlex(space-evenly, column, flex-start)
+
+            input
+                @include mixins.screenSize(35px, 100%)
+
+                border-radius: 5px
+                padding: 0 10px
+
+        &__contact
+            @include mixins.screenSize(300px, 95%)
+            @include mixins.diplayFlex(space-evenly, column, flex-start)
+
+            input
+                @include mixins.screenSize(36px, 95%)
+
+                border-radius: 5px
+                padding: 0 10px
+
+        &__edit
+
+            @include mixins.screenSize(300px, 95%)
+            @include mixins.diplayFlex(space-evenly, column, flex-start)
+
+    .label
+        position: sticky
+        background-color: variables.$color-primary
+        padding: 0 4px
+        border-radius: 3px
+        left: 10%
+
+        @include mixins.fonts(14px, 500)
+
+        &__name
+            top: 59%
+
+        &__email
+            top: 50%
+
+        &__pass
+            top: 68.5%
+
+        &__num
+            top: 77.7%
+
+@include mixins.media-m
+    .div-register
+        @include mixins.screenSize(60%, 480px)
+
+    .form-register
+        @include mixins.screenSize(360px, 400px)
+
+    .label
+        left: 18%
+
+        &__name
+            top: 58%
+
+        &__email
+            top: 47.5%
+
+        &__num
+            top: 78%
+
+        &__pass
+            top: 68%
+
+@include mixins.media-md
+
+    .div-register
+        @include mixins.screenSize(60%, 480px)
+
+    .form-register
+        @include mixins.screenSize(360px, 400px)
+
+    .label
+        left: 26%
+
+        &__name
+            top: 58%
+
+        &__email
+            top: 47.5%
+
+        &__num
+            top: 78%
+
+        &__pass
+            top: 68%
+
+@include mixins.media-xl
+    .label
+        left: 35.5%
+
+        &__name
+            top: 58.5%
+
+        &__email
+            top: 48.5%
+
+        &__num
+            top: 78%
+
+        &__pass
+            top: 68.5%

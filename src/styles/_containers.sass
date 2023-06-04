@@ -1,0 +1,18 @@
+@use "mixins"
+
+.container
+    margin: 0 auto
+    max-width: 1200px
+    width: 100%
+
+    &__nav
+        display: flex
+        justify-content: center
+
+    &__main
+        position: absolute
+        top: 74px
+        height: 95%
+
+        @include mixins.diplayFlex(flex-start, column, center)
+        gap: 10px
