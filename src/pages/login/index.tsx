@@ -1,5 +1,5 @@
 import logo from "../../assets/logo-fullstack-project.png"
-import { LoginForm } from "../../components/structures/loginForm"
+import { LoginForm } from "../../components/structures/formLogin/loginForm"
 import "./styles.sass"
 
 export const LoginPage = () => {

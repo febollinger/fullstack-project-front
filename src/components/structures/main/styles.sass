@@ -1,0 +1,59 @@
+@use "src/styles/mixins"
+@use "src/styles/variables"
+
+@include mixins.media-xsm
+    main
+        @include mixins.screenSize(100vh ,100%)
+        @include mixins.diplayFlex(center, column, center)
+
+    .infos
+        @include mixins.screenSize(20% ,88%)
+        @include mixins.diplayFlex(space-evenly, column, flex-start)
+
+        h2
+            @include mixins.fonts(2rem, 500)
+
+        h4
+            @include mixins.fonts(1.2rem, 500)
+
+    .contacts
+        @include mixins.screenSize(80% ,88%)
+        @include mixins.diplayFlex(flex-start, column, center)
+
+        h1
+            @include mixins.fonts(2rem, 500)
+            align-self: center
+            padding: 0.8rem
+
+    .list
+        @include mixins.screenSize(90% ,98%)
+        @include mixins.diplayFlex(flex-start, column, center)
+        gap: 20px
+
+    .card
+        @include mixins.screenSize(80px ,95%)
+        @include mixins.diplayFlex(space-between, row, center)
+
+    .person
+        height: 80px
+        border-bottom: 1px solid variables.$grey0
+
+        &__infos
+            width: 90%
+            @include mixins.diplayFlex(space-between, column, flex-start)
+
+            span
+                margin: 5px 0
+        &__btns
+            width: 10%
+            @include mixins.diplayFlex(center, column, center)
+            gap: 8px
+
+            button
+                background-color: variables.$color-bg
+
+@include mixins.media-md
+    .list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 20px 10px

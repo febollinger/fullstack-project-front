@@ -1,9 +1,16 @@
-export const InputForm = ({label, placeholder, type, id, className}) => {
+import { InputHTMLAttributes, forwardRef, ForwardedRef } from "react";
+
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
+    label?: string;
+    className ?: string;
+} 
+
+export const InputForm = forwardRef(({label, className,...rest}: InputProps, ref: ForwardedRef<HTMLInputElement>) => {
     return (
         <>
-            <label htmlFor={id} className={className}>{label}</label>
-            <input type={type} id={id} placeholder={placeholder} />
+            <label className={className}>{label}</label>
+            <input ref={ref}  {...rest} />
 
         </>
     )
-}
+})
